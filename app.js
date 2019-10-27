@@ -7,7 +7,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 
-var connection = mysql.createConnection(process.eng.CLEARDB_DATABASE_URL);
+var connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
 
 connection.query("CREATE TABLE users(id INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(100))", function(err){
   if(err) throw err;
