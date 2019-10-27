@@ -1,0 +1,23 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>JOIN US</h1>
+        <p class="lead">Enter your email to join <strong><%= count %></strong> others on our waitlist. </p>
+        <form method="POST" action='/register'>
+            <input type="text" class="form" name="email" placeholder="Enter Your Email">
+            <button>Join Now</button>
+        </form>
+      <h3>Submitted emails!</h3>
+      <div>
+        <ul>
+          <% for (var i = 0; i < emails.length; i++) { %>
+          <li><%= emails[i].email %></li>
+          <% }; %>
+        </ul>
+      </div>
+    </div>
+</body>

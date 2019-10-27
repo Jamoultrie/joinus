@@ -1,0 +1,19 @@
+{
+  "name": "join_us",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "sass": "node-sass sass/index.scss -o public/css/",
+    "start": "npm i && npm run sass && node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "mysql": "^2.13.0",
+    "node-sass": "^4.12.0"
+  }
+}
