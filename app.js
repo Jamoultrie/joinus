@@ -9,7 +9,7 @@ app.use(express.static(__dirname + "/public"));
 
 var connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
 
-connection.query("CREATE TABLE users(id INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(100))", function(err){
+connection.query("CREATE TABLE IF NOT EXISTS users(id INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(100))", function(err){
   if(err) throw err;
 });
 
